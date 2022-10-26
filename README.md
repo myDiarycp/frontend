@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+To run app:
+
+Clone directory
+In frontend folder:
+  run "npm init"
+  run "npm install react"
+  run "npm install gh-pages"
+  run "npm install axios"
+  Finally, run "npm start"
+
+
+# Getting Started with Create React App. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
