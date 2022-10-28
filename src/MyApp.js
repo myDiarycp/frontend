@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 
 function MyApp() {
-    const domain="http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
+    const domain="https://mydiary.yoelnozar.com"
     //const domain="http://localhost:5000"
     const [characters, setCharacters] = useState([]);
     
