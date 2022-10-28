@@ -13,12 +13,13 @@ import {
   Route,
 } from "react-router-dom";
 import Cookie from './cookie';
+
 function MyApp() {
-    const domain="https://mydiary.yoelnozar.com"
+    const domain="mydiary.yoelnozar.com"
     //const domain="http://localhost:5000"
    //HOME SCREEN
            
-         const router = createHashRouter([
+         const router = createBrowserRouter([
             {
               path: "/",
               element: <Root/>,
@@ -48,4 +49,3 @@ function MyApp() {
           );
             
   }
-export default MyApp;
