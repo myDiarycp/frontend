@@ -19,7 +19,7 @@ function MyApp() {
     //const domain="http://localhost:5000"
    //HOME SCREEN
            
-         const router = createBrowserRouter([
+         const router = createHashRouter([
             {
               path: "/",
               element: <Root/>,
