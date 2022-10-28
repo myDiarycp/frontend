@@ -8,18 +8,18 @@ import Oldhome from './oldhome';
 import Root from './root';
 import Home from './home';
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
 import Cookie from './cookie';
 
 function MyApp() {
-    const domain="https://mydiary.yoelnozar.com"
+    const domain=process.env.REACT_APP_API_DOMAIN
     //const domain="http://localhost:5000"
    //HOME SCREEN
            
-         const router = createHashRouter([
+         const router = createBrowserRouter([
             {
               path: "/",
               element: <Root/>,
@@ -43,7 +43,9 @@ function MyApp() {
           ]);
           
           ReactDOM.createRoot(document.getElementById("root")).render(
-            <RouterProvider router={router} />
+            <React.StrictMode>
+              <RouterProvider router={router} />
+            </React.StrictMode>
           );
             
   }
