@@ -1,3 +1,5 @@
+import Table from './Table'
+import Form from './Form';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import jwt_decode from "jwt-decode";
@@ -6,7 +8,7 @@ import Oldhome from './oldhome';
 import Root from './root';
 import Home from './home';
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
@@ -38,10 +40,12 @@ function MyApp() {
               element: <Root/>,
             }
           ]);
-
+          
           ReactDOM.createRoot(document.getElementById("root")).render(
-            <RouterProvider router={router} />
+            <React.StrictMode>
+              <RouterProvider router={router} />
+            </React.StrictMode>
           );
-
+            
   }
-  export default MyApp;
+export default MyApp;
