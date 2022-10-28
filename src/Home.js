@@ -17,7 +17,7 @@ function Home() {
     <React.Fragment>
       <Container fluid id="left_home_page">
         {/* <img src={logo} alt="Logo" id="diary_logo" />; */}
-        <p> This is the left side</p>
+        <header id="title">My Diary</header>
       </Container>
       <Container fluid id="right_home_page">
         <p> This is the right side</p>

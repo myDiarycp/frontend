@@ -25,3 +25,11 @@
   left: 654px;
   top: 159px;
 }
+
+#title{
+  /* change font style */
+  color: #FFD9C0;
+  padding-top: 25%;
+  font-size: 7em;
+  text-align: center;
+}
