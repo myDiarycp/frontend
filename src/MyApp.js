@@ -1,5 +1,3 @@
-import Table from './Table'
-import Form from './Form';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import jwt_decode from "jwt-decode";
@@ -8,18 +6,17 @@ import Oldhome from './oldhome';
 import Root from './root';
 import Home from './home';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
 import Cookie from './cookie';
-
 function MyApp() {
-    const domain=process.env.REACT_APP_API_DOMAIN
+    const domain="https://mydiary.yoelnozar.com"
     //const domain="http://localhost:5000"
    //HOME SCREEN
            
-         const router = createBrowserRouter([
+         const router = createHashRouter([
             {
               path: "/",
               element: <Root/>,
@@ -41,13 +38,9 @@ function MyApp() {
               element: <Root/>,
             }
           ]);
-          
-          ReactDOM.createRoot(document.getElementById("root")).render(
-            <React.StrictMode>
-              <RouterProvider router={router} />
-            </React.StrictMode>
-          );
-            
-  }
 
-export default MyApp;
+          ReactDOM.createRoot(document.getElementById("root")).render(
+            <RouterProvider router={router} />
+          );
+
+  }
