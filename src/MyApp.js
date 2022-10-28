@@ -8,7 +8,7 @@ import Oldhome from './oldhome';
 import Root from './root';
 import Home from './home';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
