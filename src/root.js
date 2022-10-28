@@ -9,6 +9,8 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import LeftSide from './left';
+import RightSide from './right';
 
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,8 +24,16 @@ const cognitoUrl=""
 export default function Root() {
     return (
       <>
-        <div>Hello World I am the landing page
-            </div> </>
+    <div className="App">
+      <Row className="bothPages">
+        <Col className="left">
+          <LeftSide></LeftSide>
+        </Col>
+        <Col className="right">
+          <RightSide></RightSide>
+        </Col>
+      </Row>
+    </div> </>
     );
   }
   

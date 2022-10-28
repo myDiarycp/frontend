@@ -16,12 +16,12 @@ import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-export default function Home() {
-    const domain=process.env.REACT_APP_API_DOMAIN//"https://api.airable.org"
+export default function Cookie() {
+    const domain=process.env.REACT_APP_API_DOMAIN
     const cognitoUrl=""+process.env.REACT_APP_COGNITO_REDIRECT
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    let user=JSON.parse(localStorage.getItem("user"))
+    let user=""
     async function fetchUser(id){
         try {
            const response = await axios.get(domain+'/user:'+id);
@@ -40,14 +40,15 @@ export default function Home() {
            url.indexOf("&")
        );
        console.log(url)
-       if(!localStorage.getItem("user"))
+       //if(!localStorage.getItem("user"))
        try {
         user= JSON.stringify(jwt_decode(token))
         localStorage.setItem("user", user);
-        //window.location.replace("/home")
+        window.location.replace("/home")
         return user
        }
        catch(error){
+        console.log("no token")
        window.location.replace(cognitoUrl);}
   
        }
@@ -61,7 +62,7 @@ export default function Home() {
 
     return (
       <>
-        <div>Hello {user.name} welcome to your diary
+        <div>
             </div> </>
     );
   }

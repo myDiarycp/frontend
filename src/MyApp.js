@@ -12,6 +12,7 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import Cookie from './cookie';
 
 function MyApp() {
     const domain="http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
@@ -32,7 +33,13 @@ function MyApp() {
              },{
                path: "/oldhome",
                element: <Oldhome/>,
-             }
+             },{
+              path: "/cookie",
+              element: <Cookie/>,
+            },{
+              path: "/frontend", //SUSS IF STUFF DOESNT WORK DELETE THIS 
+              element: <Root/>,
+            }
           ]);
           
           ReactDOM.createRoot(document.getElementById("root")).render(

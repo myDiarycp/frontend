@@ -2,8 +2,12 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: react frontend CI/CD
+env:
+  REACT_APP_API_DOMAIN: https://mydiary.yoelnozar.com
+  REACT_APP_COGNITO_REDIRECT: https://mydiarycp.github.io/frontend/
+  REACT_APP_COGNITO: "https://mydiary.auth.us-east-1.amazoncognito.com/login?client_id=48f5b7938qm4dnjfleknn07a3&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri="
 
-on:
+  on:
   push:
     branches: [main, pages-deploy]
 
