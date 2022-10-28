@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import './App.css';
 //import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 
@@ -7,19 +8,30 @@ const RightSide = () => {
 
   return (
     <div>
-      <img
-        src={require('./images/logo.jpg')}
-        height={400}
-        width={400}
-        className="bookimage"
-        alt=""
-      />
+      <img src={require('./images/logo.jpg')} className="bookimage" alt="" />
       {/* <Routes>
         <Route path="/login" element={}/>
         <Route paht="/signup" element={}/>
       </Routes> */}
-      <button className="Signup"> Sign Up</button>
-      <button className="Login"> Log In</button>
+      <Button
+        className="Signup"
+        variant="dark"
+        size="lg"
+        href="https://mydiary.auth.us-east-1.amazoncognito.com/signup?client_id=48f5b7938qm4dnjfleknn07a3&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/cookie">
+        Sign Up
+      </Button>
+      {/* <button
+        className="Signup"
+        href="https://mydiary.auth.us-east-1.amazoncognito.com/login?client_id=48f5b7938qm4dnjfleknn07a3&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/home">
+        Sign Up
+      </button> */}
+      <Button
+        className="Login"
+        variant="dark"
+        size="lg"
+        href="https://mydiary.auth.us-east-1.amazoncognito.com/login?client_id=48f5b7938qm4dnjfleknn07a3&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:3000/cookie">
+        Log In
+      </Button>
     </div>
   );
 };
