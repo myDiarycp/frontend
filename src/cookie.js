@@ -38,7 +38,7 @@ export default function Cookie() {
           localStorage.setItem("userData", JSON.stringify(account));
          }
          else{
-          //user already in DB
+          //user already in DB  a
           userData=userList[0]
           console.log(userData)
           localStorage.setItem("userData", JSON.stringify(userData));
