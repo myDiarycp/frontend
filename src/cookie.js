@@ -72,7 +72,7 @@ export default function Cookie() {
         fetchUser(name,sub)
         
         //console.log(user)
-        //window.location.replace("/home")
+        window.location.replace("/home")
         return user
        }
        catch(error){
