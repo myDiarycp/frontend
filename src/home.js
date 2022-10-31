@@ -17,15 +17,32 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 export default function Home() {
-    const domain=process.env.REACT_APP_API_DOMAIN//"https://api.airable.org"
+    const domain="http://localhost:8080"//process.env.REACT_APP_API_DOMAIN//"https://api.airable.org"
     const cognitoUrl=""+process.env.REACT_APP_COGNITO_REDIRECT
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
+    const sub=""
     let user=JSON.parse(localStorage.getItem("user"))
-    async function fetchUser(id){
+    let userData=JSON.parse(localStorage.getItem("userData"))
+    async function fetchUser(sub){
         try {
-           const response = await axios.get(domain+'/user:'+id);
-           return response.data.users_list;     
+           const response = await axios.get(domain+'/users/'+sub);
+           console.log("hi")
+           console.log(response)
+           const userList=response.data.users_list;
+           if (userList.length<1){
+            const account={name:user.name,subject:user.sub,userProfile:"Profile",entries:"Diary Entries"}
+            console.log(account)
+            const resp=await axios.post(domain+'/users',account)
+            console.log(resp)
+           }
+           else{
+            //user already in DB
+            userData=userList[0]
+            console.log(userData)
+
+           }
+           return response.data.users_list;
         }
         catch (error){
            //We're not handling errors. Just logging into the console.
@@ -44,6 +61,7 @@ export default function Home() {
        try {
         user= JSON.stringify(jwt_decode(token))
         localStorage.setItem("user", user);
+        user=localStorage.getItem("user")//not sure
         //window.location.replace("/home")
         return user
        }
@@ -53,15 +71,15 @@ export default function Home() {
        }
        useEffect(() => {
         
-        loginStatus().then(result=>console.log(result)).then(fetchUser().then( result => {
+        loginStatus().then(result=>console.log(result)).then( result => {
              if (result){}
-           }))
+           })
        }, [] );
 
 
     return (
       <>
-        <div>Hello {user.name} welcome to your diary
+        <div>Hello {user.name} welcome to your diary <br/> {JSON.stringify(userData)}
             </div> </>
     );
   }
