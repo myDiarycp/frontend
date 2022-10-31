@@ -23,15 +23,17 @@ export default function Cookie() {
     const urlParams = new URLSearchParams(queryString);
     let user=""
     let userData=""
-    async function fetchUser(subject){
+    async function fetchUser(name,subject){
       try {
+         console.log(subject)
          console.log(subject)
          const response = await axios.get(domain+'/users/'+subject);
          console.log("hi")
          console.log(response)
          const userList=response.data.users_list;
          if (userList.length<1){
-          const account={name:user.name,subject:user.sub,userProfile:"Profile",entries:"Diary Entries"}
+         //user=localStorage.getItem("user")
+          const account={name:name,subject:subject,userProfile:"Profile",entries:"Diary Entries"}
           console.log(account)
           const resp=await axios.post(domain+'/users',account)
           console.log(resp)
@@ -64,10 +66,13 @@ export default function Cookie() {
         
         user= JSON.stringify(jwt_decode(token))
         const sub=jwt_decode(token).sub
+        const name=jwt_decode(token).name
+        console.log(sub)
         localStorage.setItem("user", user);
-        fetchUser(sub)
+        fetchUser(name,sub)
+        
         //console.log(user)
-        window.location.replace("/home")
+        //window.location.replace("/home")
         return user
        }
        catch(error){
