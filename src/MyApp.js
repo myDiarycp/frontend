@@ -15,7 +15,7 @@ import {
 import Cookie from './cookie';
 
 function MyApp() {
-    const domain="mydiary.yoelnozar.com" //process.env.REACT_APP_API_DOMAIN
+    const domain="mydiary.yoelnozar.com"
     //const domain="http://localhost:5000"
    //HOME SCREEN
            
