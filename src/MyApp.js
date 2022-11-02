@@ -24,17 +24,17 @@ function MyApp() {
               path: "/",
               element: <Root/>,
             },{
-               path: "/home",
+               path: "frontend/home",
                element: <Home/>,
              },
              {
-               path: "/status",
+               path: "frontend/stats",
                element: <Home/>, //switch to actual page
              },{
-               path: "/oldhome",
+               path: "frontend/oldhome",
                element: <Oldhome/>,
              },{
-              path: "/cookie",
+              path: "frontend/cookie",
               element: <Cookie/>,
             },{
               path: "/frontend", //SUSS IF STUFF DOESNT WORK DELETE THIS 
