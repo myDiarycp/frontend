@@ -21,7 +21,7 @@ function MyApp() {
            
          const router = createBrowserRouter([
             {
-              path: "/",
+              path: "frontend/",
               element: <Root/>,
             },{
                path: "frontend/home",
