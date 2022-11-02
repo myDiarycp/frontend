@@ -21,20 +21,20 @@ function MyApp() {
            
          const router = createBrowserRouter([
             {
-              path: "frontend/",
+              path: "/frontend/",
               element: <Root/>,
             },{
-               path: "frontend/home",
+               path: "/frontend/home",
                element: <Home/>,
              },
              {
-               path: "frontend/stats",
+               path: "/frontend/stats",
                element: <Home/>, //switch to actual page
              },{
-               path: "frontend/oldhome",
+               path: "/frontend/oldhome",
                element: <Oldhome/>,
              },{
-              path: "frontend/cookie",
+              path: "/frontend/cookie",
               element: <Cookie/>,
             },{
               path: "/frontend", //SUSS IF STUFF DOESNT WORK DELETE THIS 
