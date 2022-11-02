@@ -24,20 +24,20 @@ function MyApp() {
               path: "/",
               element: <Root/>,
             },{
-               path: "/home",
+               path: "home",
                element: <Home/>,
              },
              {
-               path: "/stats",
+               path: "stats",
                element: <Home/>, //switch to actual page
              },{
-               path: "/oldhome",
+               path: "oldhome",
                element: <Oldhome/>,
              },{
-              path: "/cookie",
+              path: "cookie",
               element: <Cookie/>,
             },{
-              path: "/frontend", //SUSS IF STUFF DOESNT WORK DELETE THIS 
+              path: "frontend", //SUSS IF STUFF DOESNT WORK DELETE THIS 
               element: <Root/>,
             }
           ]);
