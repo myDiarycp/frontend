@@ -44,7 +44,7 @@ export default function Home() {
        try {
         user= JSON.stringify(jwt_decode(token))
         localStorage.setItem("user", user);
-        //window.location.replace("/home")
+        //window.location.replace("/home") //sanity check
         return user
        }
        catch(error){
