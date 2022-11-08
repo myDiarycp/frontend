@@ -11,8 +11,8 @@ import {
 } from "react-router-dom";
 
 function Oldhome() {
-    const domain="http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
-    //const domain="http://localhost:5000"
+    const domain="http://localhost:8080" //"http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
+    //const domain=REACT_APP_API_DOMAIN
     const [characters, setCharacters] = useState([]);
     
     async function fetchAll(){
