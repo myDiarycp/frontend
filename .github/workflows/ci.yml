@@ -6,7 +6,7 @@ env:
   REACT_APP_API_DOMAIN: https://mydiary.yoelnozar.com
   REACT_APP_COGNITO_REDIRECT: https://mydiarycp.github.io/frontend
   REACT_APP_COGNITO: https://mydiary.auth.us-east-1.amazoncognito.com/login?client_id=48f5b7938qm4dnjfleknn07a3&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=
-  CI: false
+  CI: true
 on:
   push:
     branches: [main, pages-deploy]
@@ -32,10 +32,5 @@ jobs:
         # working-directory: ./frontend
         run: npm install --legacy-peer-deps
       - run: npm run build --if-present
-      # - run: npm test --passWithNoTests
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          # todo - try GITHUB_TOKEN : https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-first-deployment-with-github_token
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./build
+      - run: npm test --passWithNoTests
+      
