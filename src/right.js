@@ -14,7 +14,7 @@ const RightSide = () => {
           className="Signup"
           variant="dark"
           size="lg"
-          href={process.env.REACT_APP_COGNITO+process.env.REACT_APP_COGNITO_REDIRECT+"/cookie"}>
+          href={process.env.REACT_APP_COGNITO+window.location.href+"cookie"}>
           Sign Up
         </Button>
         {/* <button
@@ -26,7 +26,7 @@ const RightSide = () => {
           className="Login"
           variant="dark"
           size="lg"
-          href={process.env.REACT_APP_COGNITO+process.env.REACT_APP_COGNITO_REDIRECT+"/cookie"}>
+          href={process.env.REACT_APP_COGNITO+window.location.href+"cookie"}>
           Log In
         </Button>
       </div>
