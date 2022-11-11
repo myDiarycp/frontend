@@ -7,12 +7,15 @@ import ReactDOM from "react-dom/client";
 import Oldhome from './oldhome';
 import Root from './root';
 import Home from './home';
+import Calendar from './calender_page'
+import Day from './routes/DayEvent'
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
 import Cookie from './cookie';
+
 
 function MyApp() {
     const domain="mydiary.yoelnozar.com"
@@ -36,9 +39,14 @@ function MyApp() {
              },{
               path: "cookie",
               element: <Cookie/>,
-            },{
-              path: "frontend", //SUSS IF STUFF DOESNT WORK DELETE THIS 
-              element: <Root/>,
+            },
+            {
+              path: "calendar",  
+              element: <Calendar/>,
+            },
+            {
+              path: "calendar/day",  
+              element: <Day/>,
             }
           ]);
           
