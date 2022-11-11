@@ -26,10 +26,10 @@ export default function Root() {
       <>
     <div className="App">
       <Row className="bothPages">
-        <Col className="left">
+        <Col className="left-homepage">
           <LeftSide></LeftSide>
         </Col>
-        <Col className="right">
+        <Col className="right-homepage">
           <RightSide></RightSide>
         </Col>
       </Row>

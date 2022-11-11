@@ -70,7 +70,7 @@ body{
   color: #61dafb;
 }
 
-.right {
+.right-homepage {
   background-color: #FFD9C0;
   min-height: 100vh;
   /* margin:0; */
@@ -79,7 +79,7 @@ body{
   /* position:absolute; */
 }
 
-.left {
+.left-homepage {
   background-color: #11324D;
   min-height: 100vh;
 }
