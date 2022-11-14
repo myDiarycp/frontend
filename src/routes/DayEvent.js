@@ -15,7 +15,7 @@ import Alert from 'react-bootstrap/Alert';
 import axios from "axios";
 
 export default function Journal() {
-    const domain="http://localhost:8080"//process.env.REACT_APP_API_DOMAIN
+    const domain=process.env.REACT_APP_API_DOMAIN //"http://localhost:8080"
     const location = useLocation();
     let date_object = location.state;
     let date = (date_object.getMonth() + 1) + "-" + date_object.getDate() + "-" + date_object.getFullYear();
