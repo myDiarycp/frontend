@@ -12,8 +12,10 @@ import Quill from 'quill'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Alert from 'react-bootstrap/Alert';
+import axios from "axios";
 
 export default function Journal() {
+    const domain="http://localhost:8080"//process.env.REACT_APP_API_DOMAIN
     const location = useLocation();
     let date_object = location.state;
     let date = (date_object.getMonth() + 1) + "-" + date_object.getDate() + "-" + date_object.getFullYear();
@@ -41,7 +43,7 @@ export default function Journal() {
      
 
 
-       function submitEntry(){
+       async function submitEntry(){
         const entryUpdate={date:date,title:"My First Entry", text: value, rating:10}
         console.log("submitted")
         DiaryMap.set(date,entryUpdate)
@@ -49,7 +51,9 @@ export default function Journal() {
         userData.diary=Object.fromEntries(DiaryMap)
         //localStorage.setItem(date,JSON.stringify(value))
         localStorage.setItem("userData",JSON.stringify(userData))
-        console.log(value)
+        console.log(domain+"/users/"+userData.subject)
+        const resp=await axios.put(domain+"/users/"+userData.subject,userData)
+        console.log(resp)
         alert("Entry Saved!");
         window.location.href = '/calendar';
 
