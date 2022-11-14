@@ -1,16 +1,100 @@
+.DayEvent {
+  min-height: 100vh;
+}
+
 .left {
-    background-color: #FFD9C0;
+    /* background-color: #FFD9C0; */
     min-height: 100vh;
+    background: #11324D;
+    border-right: 2px solid white;
   }
 
-  .right {
-    /* font-family: 'Lexend Deca', 'Otomanopee One';  */
-    font-family: Montserrat;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 2%;
-    padding-right: 2%;
-    background-color: #FFD9C0;
-    min-height: 100vh;
-    /* text-align: center; */
-  }
+/* MyDiary text header */
+.leftText {
+  color: #ffffff; 
+  /* width: 190px;  */
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 240px;
+  height: 60px;
+  background: #11324D;
+  font-family: 'Lexend Deca', 'Otomanopee One'; 
+  font-size: 35px;
+  font-weight: 500;
+  /* create borders */
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 2px;
+}
+
+.entryImage {
+  left: 150px;
+  position: absolute;
+  top: 3px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+}
+
+.middle {
+  background-color: #FFD9C0;
+  min-height: 100vh;
+  /* added a border */
+  /* border-right: 2px solid black; */
+}
+
+
+.entrySide {
+  /* change color of right side of page (text editor side) */
+  background-color: white;
+  min-height: 100vh;
+  border-left: 2px solid black;
+
+  /* remove margin from column */
+  /* padding: 0 !important;
+  margin: 0 !important; */
+}
+
+/* the date header text */
+.aboveEntry {
+  color: #ffffff; 
+  background: #11324D;
+  font-family: 'Lexend Deca', 'Otomanopee One'; 
+  font-size: 40px;
+  font-weight: 500;
+  width: 100%;
+  background-size: contain;
+  display:inline-block;
+}
+
+/* welcome to diary title */
+.mtitle {
+  /* margin-right: 100px;
+  margin-left: 80px; */
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  width: 240px; 
+  background: rgb(255, 255, 255);
+  font-family: 'Lexend Deca', 'Otomanopee One'; 
+  color: #000000; 
+  font-size: 61px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.ratingTitle {
+  color: #000000; 
+  font-family: 'Lexend Deca', 'Otomanopee One'; 
+  font-size: 30px;
+  font-weight: 500;
+  text-underline-position: below;
+}
+
+/* adjust the text editor box */
+.wrapperClassName {
+  height: 300px;
+  width: 100%;
+}

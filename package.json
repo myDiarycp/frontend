@@ -14,12 +14,15 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
+    "draft-js": "^0.11.7",
+    "draft-js-wysiwyg": "^1.2.1",
     "gh-pages": "^4.0.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-calendar": "^4.0.0",
     "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -49,5 +52,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "- 1.) Install Prettier and ESlint in VSCode - 2.) In frontend repository, install npm install eslint --save-dev - 3.) npx eslint --init to create our .eslintrc.json file which tells us how we will use lint -  follow the instructions on https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b - 4.) add rule to .eslintrc.json file as it make importing compatible with recent react version: \"rules\": { -    \"react/react-in-jsx-scope\": \"off\" -  } - 5.) Modify .eslintrc.json and add rule: -  \"env\": { -    \"browser\": true, -    \"es2021\": true, -    \"jest\": true -  } - 6.) run command: npm install eslint-config-prettier eslint-plugin-prettier prettier --save-dev - so ESlint doesn't conflict with Prettier - 7.) Create .prettierrc and paste the below code:  - { - \"semi\": true, -  \"tabWidth\": 2, - \"printWidth\": 100, -  \"singleQuote\": true, -  \"trailingComma\": \"none\", - \"jsxBracketSameLine\": true -}",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myDiarycp/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myDiarycp/frontend/issues"
   }
 }

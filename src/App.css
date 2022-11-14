@@ -10,15 +10,15 @@ body{
 }
 
 .Sidebar{
-  padding-top: 5%;
-  height: 100%;
-  width: 20%;
-  background-color: #2F4050;
+  min-height: 100vh;
+  /* change width of blue sidebar */
+  width: 190px;
+  background-color: #11324D;
 }
 
 .SideBarList{
-  height: auto;
   padding: 0;
+  /* text of the sidebar */
   width: 100%;
   /* background-color: aqua; */
 }
@@ -36,12 +36,13 @@ body{
   justify-content: center;
   align-items: center;
 
-
 }
 
 .SideBarList #row:hover{
   cursor: pointer;
   background-color: #293846;
+  /* change hover length of sidebar */
+  width: 220px;
 }
 
 #row #row-icon {
@@ -86,8 +87,8 @@ body{
 
 .Signup {
   display: inline;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 100px;
+  margin-right: 50px;
   width: 27%;
   margin-top: 80px;
   color: #FFD9C0;
@@ -102,8 +103,8 @@ body{
 
 .Login {
   display: inline;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
   width: 25%;
   margin-top: 80px;
   color: #FFD9C0;

@@ -18,7 +18,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function Cookie() {
-    const domain="http://localhost:8080"//process.env.REACT_APP_API_DOMAIN
+    const domain=process.env.REACT_APP_API_DOMAIN
     const cognitoUrl=""+process.env.REACT_APP_COGNITO_REDIRECT
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
