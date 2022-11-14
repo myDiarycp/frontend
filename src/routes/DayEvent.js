@@ -16,8 +16,19 @@ import Alert from 'react-bootstrap/Alert';
 export default function Journal() {
     const location = useLocation();
     let date_object = location.state;
-    let date = (date_object.getMonth() + 1) + "/" + date_object.getDate() + "/" + date_object.getFullYear();
-    const initVal=JSON.parse(localStorage.getItem(date))||""
+    let date = (date_object.getMonth() + 1) + "-" + date_object.getDate() + "-" + date_object.getFullYear();
+    const Diary=JSON.parse(localStorage.getItem("userData")).diary
+    const DiaryMap = new Map(Object.entries(Diary));
+    
+    var entry=DiaryMap.get(date)
+    
+    var initVal=""
+    if(entry){
+        initVal=entry.text
+    }
+    else
+    initVal=""
+    //initVal=JSON.parse(localStorage.getItem(date))||""
     const [value, setValue] = useState(initVal);
     //access our current path location
    
@@ -31,8 +42,13 @@ export default function Journal() {
 
 
        function submitEntry(){
+        const entryUpdate={date:date,title:"My First Entry", text: value, rating:10}
         console.log("submitted")
-        localStorage.setItem(date,JSON.stringify(value))
+        DiaryMap.set(date,entryUpdate)
+        var userData=JSON.parse(localStorage.getItem("userData"))
+        userData.diary=Object.fromEntries(DiaryMap)
+        //localStorage.setItem(date,JSON.stringify(value))
+        localStorage.setItem("userData",JSON.stringify(userData))
         console.log(value)
         alert("Entry Saved!");
         window.location.href = '/calendar';
