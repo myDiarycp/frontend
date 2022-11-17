@@ -1,5 +1,5 @@
 import Calendar from 'react-calendar';
-import React, { useState } from 'react';
+import React, { useState,useEffect, } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // import 'react-calendar/dist/Calendar.css';
@@ -10,8 +10,10 @@ import './calendar.css';
 // import './index.css';
 // import './App.css';
 
-const CalendarDisplay = () => {
+export default function CalendarDisplay() {
     // When we refresh we use current date state
+    const Diary=JSON.parse(localStorage.getItem("userData")).diary
+    const DiaryMap = new Map(Object.entries(Diary));
     const [date, setDate] = useState(new Date());
     let navigate = useNavigate();
     const routeChange = (curr_date) => {
@@ -19,6 +21,30 @@ const CalendarDisplay = () => {
         console.log(path + curr_date);
         navigate(path, { state: curr_date });
     };
+    var grad=new Gradient()
+    .setColorGradient("#FF0000", "00FF00").getColors()
+    var grad=['0','#ff222c',"#ff7b80",'#96ed89','#45BF55','#168039']
+    useEffect(()=>
+    {
+        const dateButtons = document.querySelectorAll(".react-calendar__tile");
+        dateButtons.forEach((element)=>{
+            //console.log(element.children[0].getAttribute("aria-label"))
+            var dt=new Date(element.children[0].getAttribute("aria-label")).toLocaleDateString("en-US").replace(/\//g, '-');
+            //console.log(dt)
+            var entry=DiaryMap.get(dt)
+            console.log(entry)
+            
+            if(entry&&dt!=new Date().toLocaleDateString("en-US").replace(/\//g, '-')){
+                console.log(grad[(entry.rating)/2])
+                element.style.background=grad[entry.rating/2]}
+
+            }
+            
+            
+            
+            )
+        //[0].style.background='#FFFFFF';
+    }) 
 
     return (
         <div>
@@ -34,6 +60,4 @@ const CalendarDisplay = () => {
             />
         </div>
     );
-};
-
-export default CalendarDisplay;
+}
