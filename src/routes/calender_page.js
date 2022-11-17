@@ -21,8 +21,6 @@ export default function CalendarDisplay() {
         console.log(path + curr_date);
         navigate(path, { state: curr_date });
     };
-    var grad=new Gradient()
-    .setColorGradient("#FF0000", "00FF00").getColors()
     var grad=['0','#ff222c',"#ff7b80",'#96ed89','#45BF55','#168039']
     useEffect(()=>
     {
