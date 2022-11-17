@@ -3,6 +3,7 @@ import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 
+// values of the stars
 const labels = {
   // 0.5: 'Horrible',
   1: 'Horrible',
@@ -21,6 +22,7 @@ function getLabelText(value) {
 }
 
 function HoverRating() {
+  // set states of value and hover
   const [value, setValue] = React.useState(0);
   const [hover, setHover] = React.useState(0);
 
@@ -48,6 +50,7 @@ function HoverRating() {
         onChangeActive={(event, newHover) => {
           setHover(newHover);
         }}
+        // empty star display
         emptyIcon={<StarIcon style={{ opacity: 0.66 }} fontSize="inherit" />}
       />
       {value !== null && (
