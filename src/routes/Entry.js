@@ -7,8 +7,9 @@ import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 // import draftToHtml from 'draftjs-to-html';
-//import htmlToDraft from 'html-to-draftjs';
-import { render } from "react-dom"; 
+// import htmlToDraft from 'html-to-draftjs';
+// import { render } from "react-dom"; 
+// import { stateToHTML } from "draft-js-export-html";
 
 // text editor framework 
 class TextEditor extends Component {
@@ -38,8 +39,11 @@ class TextEditor extends Component {
         />
         {/* <textarea
           disabled
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+          // value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
         /> */}
+        {/* <div> 
+          <button onClick={}>Save Entry</button>
+        </div> */}
       </div>
     );
   }

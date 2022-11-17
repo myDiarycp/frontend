@@ -1,5 +1,7 @@
+/* main container */
 .DayEvent {
   min-height: 100vh;
+  
 }
 
 .left {
@@ -7,6 +9,7 @@
     min-height: 100vh;
     background: #11324D;
     border-right: 2px solid white;
+    overflow: hidden;
   }
 
 /* MyDiary text header */
@@ -27,15 +30,19 @@
   border-radius: 2px;
 }
 
+/* image css of upper top left */
 .entryImage {
   left: 150px;
   position: absolute;
   top: 3px;
-  background-repeat: no-repeat;
-  background-size: contain;
+  /* background-repeat: no-repeat;
+  background-size: contain; */
   margin: 0 auto;
   height: 50px;
   width: 50px;
+  display: flex;
+  overflow: hidden;
+  
 }
 
 .middle {
@@ -66,7 +73,7 @@
   font-weight: 500;
   width: 100%;
   background-size: contain;
-  display:inline-block;
+  position: relative;
 }
 
 /* welcome to diary title */

@@ -32,7 +32,7 @@ export default function Journal() {
             <Row className="entryRow">
                 <Col md={2} className = "left">
                     <h1 className="leftText">MyDiary  
-                    <img src={require('../logo.jpeg')} className="entryImage" alt="" />
+                    <img src={require('../logo.jpeg')} className="entryImage" alt=""/>
                     </h1>
                     <Sidebar />
                 </Col>
