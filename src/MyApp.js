@@ -16,6 +16,7 @@ import {
   Route,
 } from "react-router-dom";
 import Cookie from './cookie';
+import { render } from "react-dom"; 
 
 
 function MyApp() {
@@ -55,10 +56,17 @@ function MyApp() {
             }
           ]);
           
-          ReactDOM.createRoot(document.getElementById("root")).render(
+          // ReactDOM.createRoot(document.getElementById("root")).render(
+          //   <React.StrictMode>
+          //     <RouterProvider router={router} />
+          //   </React.StrictMode>
+          // );
+
+          render(
             <React.StrictMode>
               <RouterProvider router={router} />
-            </React.StrictMode>
+            </React.StrictMode>,
+            document.getElementById("root")
           );
             
   }

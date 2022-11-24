@@ -16,8 +16,11 @@ import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import DayEvent from './routes/DayEvent';
+
 export default function Home() {
-    const domain="http://localhost:8080"//process.env.REACT_APP_API_DOMAIN//"https://api.airable.org"
+    const domain=process.env.REACT_APP_API_DOMAIN
     const cognitoUrl=""+process.env.REACT_APP_COGNITO_REDIRECT
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -75,11 +78,13 @@ export default function Home() {
            })
        }, [] );
 
-
     return (
       <>
         <div>Hello {user.name} welcome to your diary <br/> {JSON.stringify(userData)}
             </div> </>
     );
   }
+
+
+
   

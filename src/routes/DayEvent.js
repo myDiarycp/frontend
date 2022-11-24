@@ -6,7 +6,11 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 // import Navbar from 'react-bootstrap/Navbar';
-import Sidebar from './/Sidebar'
+import Sidebar from './/Sidebar';
+import Entry from './/Entry';
+import Home from '../home';
+import Rating from './/Rating';
+
 import React, { useState, useEffect } from 'react'
 import Quill from 'quill'
 import ReactQuill from 'react-quill';
@@ -61,25 +65,32 @@ export default function Journal() {
     return (
         // <h1>{date}</h1>
         <div className = "DayEvent">
-            <Row>
-                <Col className = "left">
+            <Row className="entryRow">
+                <Col md={2} className = "left">
+                    <h1 className="leftText">MyDiary  
+                    <img src={require('../logo.jpeg')} className="entryImage" alt=""/>
+                    </h1>
                     <Sidebar />
                 </Col>
-                <Col className = "right">{date}
-                <ReactQuill theme="snow" value={value} onChange={setValue} />
-                
-
-
-      <Button onClick={submitEntry}
-      variant="dark"
-      size="lg"
+                <Col md={4} className="middle">
+                    <h1 className="mtitle">Welcome to Your Diary userData.name </h1>
+                </Col>
+                <Col md={6} className = "entrySide">
+                    <h1 className="aboveEntry">Entry Date: {date}</h1>
+                    <h1 className="ratingTitle"> <u>Day Rating:</u></h1>
+                    <Rating className="rating"/>
+                    <ReactQuill theme="snow" value={value} onChange={setValue} />
+                    <Button onClick={submitEntry}
+                    variant="dark"
+                    size="lg"
       
-      >Submit</Button>
-      
+                    >Submit</Button>
                 </Col>
             </Row>
         </div>
 
     );
+
+
     
 }
