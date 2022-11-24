@@ -18,7 +18,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function Cookie() {
-    const domain=process.env.REACT_APP_API_DOMAIN
+    const domain=process.env.REACT_APP_API_DOMAIN//"http://localhost:8080"
     const cognitoUrl=""+process.env.REACT_APP_COGNITO_REDIRECT
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -34,7 +34,8 @@ export default function Cookie() {
          const userList=response.data.users_list;
          if (userList.length<1){
          //user=localStorage.getItem("user")
-          const account={name:name,subject:subject,userProfile:"Profile",entries:"Diary Entries"}
+         const entry={date:"10-11-2022",title:"My First Entry", text: "I had a great day!", rating:10}
+          const account={name:name,_id:subject,subject:subject,userProfile:"Profile",diary:{"10-11-2022":entry}}
           console.log(account)
           const resp=await axios.post(domain+'/users',account)
           console.log(resp)
@@ -87,7 +88,7 @@ export default function Cookie() {
          //setTimeout(window.location.replace("/home"),500)
          window.setTimeout(function() {
             window.location.href = '/calendar';
-        }, 500);
+        }, 750);
          //
            })
        }, [] );

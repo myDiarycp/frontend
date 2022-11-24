@@ -9,6 +9,7 @@ import Root from './root';
 import Home from './home';
 import Calendar from './routes/calender_page'
 import Day from './routes/DayEvent'
+import Stats from './routes/Stats'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -48,6 +49,10 @@ function MyApp() {
             {
               path: "calendar/day",  
               element: <Day/>,
+            },
+            {
+              path: "calendar/stats",  
+              element: <Stats/>,
             }
           ]);
           
