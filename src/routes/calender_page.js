@@ -33,8 +33,8 @@ export default function CalendarDisplay() {
             console.log(entry)
             
             if(entry&&dt!=new Date().toLocaleDateString("en-US").replace(/\//g, '-')){
-                console.log(grad[(entry.rating)/2])
-                element.style.background=grad[entry.rating/2]}
+                console.log(grad[(entry.rating)])
+                element.style.background=grad[entry.rating]}
 
             }
             
