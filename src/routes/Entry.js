@@ -1,23 +1,21 @@
-
 // .. means it's outside the routes folder
-import "../App.css"; 
+import "../App.css";
 
-import React, { Component } from 'react';
-import { EditorState, convertToRaw } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
+import React, { Component } from "react";
+import { EditorState, convertToRaw } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 // import draftToHtml from 'draftjs-to-html';
 // import htmlToDraft from 'html-to-draftjs';
-// import { render } from "react-dom"; 
+// import { render } from "react-dom";
 // import { stateToHTML } from "draft-js-export-html";
 
-// text editor framework 
+// text editor framework
 class TextEditor extends Component {
-
   // start with empty text box
   state = {
     editorState: EditorState.createEmpty(),
-  }
+  };
 
   onEditorStateChange = (editorState) => {
     this.setState({
@@ -47,7 +45,6 @@ class TextEditor extends Component {
       </div>
     );
   }
-} 
+}
 
 export default TextEditor;
-
