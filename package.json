@@ -42,6 +42,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "prettier --write . &&eslint --fix .",
     "test": "prettier --check .",
     "eject": "react-scripts eject",
     "predeploy": "react-scripts build",

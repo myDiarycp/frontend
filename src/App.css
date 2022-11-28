@@ -4,41 +4,40 @@
   height: 100vh;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-.Sidebar{
+.Sidebar {
   min-height: 100vh;
   /* change width of blue sidebar */
   width: 190px;
-  background-color: #11324D;
+  background-color: #11324d;
 }
 
-.SideBarList{
+.SideBarList {
   padding: 0;
   /* text of the sidebar */
   width: 100%;
   /* background-color: aqua; */
 }
 
-.SideBarList #row{
+.SideBarList #row {
   width: 100%;
   height: 50px;
   /* background-color: blanchedalmond; */
   /* border: 1px solid black; */
   list-style-type: none;
   margin: 0%;
-  display: flex; 
+  display: flex;
   flex-direction: row;
   color: white;
   justify-content: center;
   align-items: center;
-
 }
 
-.SideBarList #row:hover{
+.SideBarList #row:hover {
   cursor: pointer;
   background-color: #293846;
   /* change hover length of sidebar */
@@ -49,7 +48,6 @@ body{
   flex: 30%;
   display: grid;
   place-items: center;
-
 }
 
 #row #row-title {
@@ -72,7 +70,7 @@ body{
 }
 
 .right-homepage {
-  background-color: #FFD9C0;
+  background-color: #ffd9c0;
   min-height: 100vh;
   /* margin:0; */
   /* max-width: 50%; */
@@ -81,7 +79,7 @@ body{
 }
 
 .left-homepage {
-  background-color: #11324D;
+  background-color: #11324d;
   min-height: 100vh;
 }
 
@@ -91,8 +89,8 @@ body{
   margin-right: 50px;
   width: 27%;
   margin-top: 80px;
-  color: #FFD9C0;
-  background: #393E46;
+  color: #ffd9c0;
+  background: #393e46;
   border: none;
   outline: none;
   border-radius: 6px;
@@ -107,8 +105,8 @@ body{
   margin-right: 50px;
   width: 25%;
   margin-top: 80px;
-  color: #FFD9C0;
-  background: #393E46;
+  color: #ffd9c0;
+  background: #393e46;
   border: none;
   outline: none;
   border-radius: 6px;
@@ -133,11 +131,11 @@ body{
   margin-right: auto;
   margin-left: auto;
   margin-top: 250px;
-  width: 340px; 
+  width: 340px;
   padding: 50px;
   background: rgb(255, 255, 255);
-  font-family: 'Lexend Deca', 'Otomanopee One'; 
-  color: #000000; 
+  font-family: "Lexend Deca", "Otomanopee One";
+  color: #000000;
   font-size: 61px;
   font-weight: 500;
 }

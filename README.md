@@ -3,43 +3,43 @@
 This is the frontend for the diary app.
 
 # STYLE GUIDELINES:
+
 - 1.) Install Prettier and ESlint in VSCode
 - 2.) In frontend repository, install npm install eslint --save-dev
 - 3.) npx eslint --init to create our .eslintrc.json file which tells us how we will use lint
--  follow the instructions on https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b
+- follow the instructions on https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b
 - 4.) add rule to .eslintrc.json file as it make importing compatible with recent react version: "rules": {
--    "react/react-in-jsx-scope": "off"
--  }
+- "react/react-in-jsx-scope": "off"
+- }
 - 5.) Modify .eslintrc.json and add rule:
--  "env": {
--    "browser": true,
--    "es2021": true,
--    "jest": true
--  }
+- "env": {
+- "browser": true,
+- "es2021": true,
+- "jest": true
+- }
 - 6.) run command: npm install eslint-config-prettier eslint-plugin-prettier prettier --save-dev
 - so ESlint doesn't conflict with Prettier
-- 7.) Create .prettierrc and paste the below code: 
+- 7.) Create .prettierrc and paste the below code:
 - {
 - "semi": true,
--  "tabWidth": 2,
+- "tabWidth": 2,
 - "printWidth": 100,
--  "singleQuote": true,
--  "trailingComma": "none",
+- "singleQuote": true,
+- "trailingComma": "none",
 - "jsxBracketSameLine": true
--}
+  -}
 
 To run app:
 
 Clone directory
 In frontend folder:
-  run "npm init"
-  run "npm install react"
-  run "npm install gh-pages"
-  run "npm install axios"
-  Finally, run "npm start"
+run "npm init"
+run "npm install react"
+run "npm install gh-pages"
+run "npm install axios"
+Finally, run "npm start"
 
-
-# Getting Started with Create React App. 
+# Getting Started with Create React App.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
