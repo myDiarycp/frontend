@@ -34,7 +34,7 @@ export default function Cookie() {
          const userList=response.data.users_list;
          if (userList.length<1){
          //user=localStorage.getItem("user")
-         const entry={date:"10-11-2022",title:"My First Entry", text: "I had a great day!", rating:10}
+         const entry={date:"10-11-2022",title:"My First Entry", text: "I had a great day!", rating:5}
           const account={name:name,_id:subject,subject:subject,userProfile:"Profile",diary:{"10-11-2022":entry}}
           console.log(account)
           const resp=await axios.post(domain+'/users',account)
