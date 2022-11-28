@@ -1,3 +1,7 @@
+# Frontend
+
+This is the frontend for the diary app.
+
 # STYLE GUIDELINES:
 - 1.) Install Prettier and ESlint in VSCode
 - 2.) In frontend repository, install npm install eslint --save-dev
