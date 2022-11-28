@@ -13,9 +13,9 @@ import "./calendar.css";
 const CalendarDisplay = () => {
   // When we refresh we use current date state
   const [date, setDate] = useState(new Date());
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const routeChange = (curr_date) => {
-    let path = "/calendar/day";
+    const path = "/calendar/day";
     console.log(path + curr_date);
     navigate(path, { state: curr_date });
   };

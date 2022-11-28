@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import "./App.css";
 const RightSide = () => {
-  //const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div>

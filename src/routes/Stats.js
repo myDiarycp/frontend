@@ -2,7 +2,7 @@
 // import CanvasJSReact from './canvasjs.react';
 import { CanvasJSChart } from "canvasjs-react-charts";
 
-//var CanvasJSReact = require('./canvasjs.react');
+// var CanvasJSReact = require('./canvasjs.react');
 // var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export default function Stats() {

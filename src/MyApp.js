@@ -16,8 +16,8 @@ import { render } from "react-dom";
 
 function MyApp() {
   const domain = "mydiary.yoelnozar.com";
-  //const domain="http://localhost:5000"
-  //HOME SCREEN
+  // const domain="http://localhost:5000"
+  // HOME SCREEN
 
   const router = createBrowserRouter([
     {
@@ -30,7 +30,7 @@ function MyApp() {
     },
     {
       path: "stats",
-      element: <Home />, //switch to actual page
+      element: <Home />, // switch to actual page
     },
     {
       path: "oldhome",

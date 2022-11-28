@@ -39,7 +39,7 @@ class TextEditor extends Component {
           disabled
           // value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
         /> */}
-        {/* <div> 
+        {/* <div>
           <button onClick={}>Save Entry</button>
         </div> */}
       </div>

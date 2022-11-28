@@ -25,7 +25,7 @@ function TableHeader() {
 }
 function TableBody(props) {
   const rows = props.characterData.map((row, index) => {
-    //console.log(rows)
+    // console.log(rows)
     return (
       <tr key={index}>
         <td>{row.name}</td>

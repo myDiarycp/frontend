@@ -15,22 +15,22 @@ export default function CalendarDisplay() {
   const Diary = JSON.parse(localStorage.getItem("userData")).diary;
   const DiaryMap = new Map(Object.entries(Diary));
   const [date, setDate] = useState(new Date());
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const routeChange = (curr_date) => {
-    let path = "/calendar/day";
+    const path = "/calendar/day";
     console.log(path + curr_date);
     navigate(path, { state: curr_date });
   };
-  var grad = ["0", "#ff222c", "#ff7b80", "#96ed89", "#45BF55", "#168039"];
+  const grad = ["0", "#ff222c", "#ff7b80", "#96ed89", "#45BF55", "#168039"];
   useEffect(() => {
     const dateButtons = document.querySelectorAll(".react-calendar__tile");
     dateButtons.forEach((element) => {
-      //console.log(element.children[0].getAttribute("aria-label"))
-      var dt = new Date(element.children[0].getAttribute("aria-label"))
+      // console.log(element.children[0].getAttribute("aria-label"))
+      const dt = new Date(element.children[0].getAttribute("aria-label"))
         .toLocaleDateString("en-US")
         .replace(/\//g, "-");
-      //console.log(dt)
-      var entry = DiaryMap.get(dt);
+      // console.log(dt)
+      const entry = DiaryMap.get(dt);
       console.log(entry);
 
       if (
@@ -41,7 +41,7 @@ export default function CalendarDisplay() {
         element.style.background = grad[entry.rating];
       }
     });
-    //[0].style.background='#FFFFFF';
+    // [0].style.background='#FFFFFF';
   });
 
   return (

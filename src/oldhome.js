@@ -7,8 +7,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 function Oldhome() {
-  const domain = "http://localhost:8080"; //"http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
-  //const domain=REACT_APP_API_DOMAIN
+  const domain = "http://localhost:8080"; // "http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
+  // const domain=REACT_APP_API_DOMAIN
   const [characters, setCharacters] = useState([]);
 
   async function fetchAll() {
@@ -16,7 +16,7 @@ function Oldhome() {
       const response = await axios.get(domain + "/users");
       return response.data.users_list;
     } catch (error) {
-      //We're not handling errors. Just logging into the console.
+      // We're not handling errors. Just logging into the console.
       console.log(error);
       return false;
     }

@@ -14,7 +14,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export default function Cookie() {
-  const domain = process.env.REACT_APP_API_DOMAIN; //"http://localhost:8080"
+  const domain = process.env.REACT_APP_API_DOMAIN; // "http://localhost:8080"
   const cognitoUrl = "" + process.env.REACT_APP_COGNITO_REDIRECT;
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -29,7 +29,7 @@ export default function Cookie() {
       console.log(response);
       const userList = response.data.users_list;
       if (userList.length < 1) {
-        //user=localStorage.getItem("user")
+        // user=localStorage.getItem("user")
         const entry = {
           date: "10-11-2022",
           title: "My First Entry",
@@ -37,9 +37,9 @@ export default function Cookie() {
           rating: 5,
         };
         const account = {
-          name: name,
+          name,
           _id: subject,
-          subject: subject,
+          subject,
           userProfile: "Profile",
           diary: { "10-11-2022": entry },
         };
@@ -48,14 +48,14 @@ export default function Cookie() {
         console.log(resp);
         localStorage.setItem("userData", JSON.stringify(account));
       } else {
-        //user already in DB  a
+        // user already in DB  a
         userData = userList[0];
         console.log(userData);
         localStorage.setItem("userData", JSON.stringify(userData));
       }
       return response.data.users_list;
     } catch (error) {
-      //We're not handling errors. Just logging into the console.
+      // We're not handling errors. Just logging into the console.
       console.log(error);
       return false;
     }
@@ -64,7 +64,7 @@ export default function Cookie() {
     const url = window.location.href;
     const token = url.substring(url.indexOf("=") + 1, url.indexOf("&"));
     console.log(url);
-    //if(!localStorage.getItem("user"))
+    // if(!localStorage.getItem("user"))
     try {
       user = JSON.stringify(jwt_decode(token));
       const sub = jwt_decode(token).sub;
@@ -73,7 +73,7 @@ export default function Cookie() {
       localStorage.setItem("user", user);
       fetchUser(name, sub);
 
-      //console.log(user)
+      // console.log(user)
 
       //
       return user;
@@ -86,7 +86,7 @@ export default function Cookie() {
     loginStatus()
       .then((result) => console.log(result))
       .then((result) => {
-        //setTimeout(window.location.replace("/home"),500)
+        // setTimeout(window.location.replace("/home"),500)
         window.setTimeout(function () {
           window.location.href = "/calendar";
         }, 750);

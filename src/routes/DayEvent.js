@@ -9,7 +9,7 @@ import { Button } from "react-bootstrap";
 import Sidebar from ".//Sidebar";
 import Entry from ".//Entry";
 import Home from "../home";
-//import Rating from './/Rating';
+// import Rating from './/Rating';
 
 import React, { useState, useEffect } from "react";
 import Quill from "quill";
@@ -18,17 +18,17 @@ import "react-quill/dist/quill.snow.css";
 import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 
-//Rating
+// Rating
 
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 import StarIcon from "@mui/icons-material/Star";
 
 export default function Journal() {
-  const domain = process.env.REACT_APP_API_DOMAIN; //"http://localhost:8080"
+  const domain = process.env.REACT_APP_API_DOMAIN; // "http://localhost:8080"
   const location = useLocation();
-  let date_object = location.state;
-  let date =
+  const date_object = location.state;
+  const date =
     date_object.getMonth() +
     1 +
     "-" +
@@ -38,14 +38,14 @@ export default function Journal() {
   const Diary = JSON.parse(localStorage.getItem("userData")).diary;
   const DiaryMap = new Map(Object.entries(Diary));
 
-  var entry = DiaryMap.get(date);
+  const entry = DiaryMap.get(date);
 
-  var initVal = "";
+  let initVal = "";
   if (entry) {
     initVal = entry.text;
   } else initVal = "";
 
-  //rating
+  // rating
 
   // values of the stars
   const labels = {
@@ -66,13 +66,13 @@ export default function Journal() {
   }
   //
 
-  //initVal=JSON.parse(localStorage.getItem(date))||""
+  // initVal=JSON.parse(localStorage.getItem(date))||""
   const [value, setValue] = useState(initVal);
 
-  var initRate = entry ? entry.rating : 0;
+  const initRate = entry ? entry.rating : 0;
   const [rateValue, setRateValue] = React.useState(initRate);
   const [hover, setHover] = React.useState(initRate);
-  //access our current path location
+  // access our current path location
 
   // access our state at this location which we passed through navigate in calendar_page.css
 
@@ -80,18 +80,18 @@ export default function Journal() {
   // alert(date_object);
 
   async function submitEntry() {
-    var r = rateValue ? rateValue : 0;
+    const r = rateValue || 0;
     const entryUpdate = {
-      date: date,
+      date,
       title: "My First Entry",
       text: value,
       rating: r,
     };
     console.log("submitted");
     DiaryMap.set(date, entryUpdate);
-    var userData = JSON.parse(localStorage.getItem("userData"));
+    const userData = JSON.parse(localStorage.getItem("userData"));
     userData.diary = Object.fromEntries(DiaryMap);
-    //localStorage.setItem(date,JSON.stringify(value))
+    // localStorage.setItem(date,JSON.stringify(value))
     localStorage.setItem("userData", JSON.stringify(userData));
     console.log(domain + "/users/" + userData.subject);
     const resp = await axios.put(
@@ -139,7 +139,7 @@ export default function Journal() {
               getLabelText={getLabelText}
               // set new star value
               onChange={(event, newValue) => {
-                setRateValue(newValue ? newValue : 0);
+                setRateValue(newValue || 0);
               }}
               // display the hover
               onChangeActive={(event, newHover) => {

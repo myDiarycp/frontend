@@ -40,13 +40,13 @@ export default function Home() {
         const resp = await axios.post(domain + "/users", account);
         console.log(resp);
       } else {
-        //user already in DB
+        // user already in DB
         userData = userList[0];
         console.log(userData);
       }
       return response.data.users_list;
     } catch (error) {
-      //We're not handling errors. Just logging into the console.
+      // We're not handling errors. Just logging into the console.
       console.log(error);
       return false;
     }
@@ -55,15 +55,16 @@ export default function Home() {
     const url = window.location.href;
     const token = url.substring(url.indexOf("=") + 1, url.indexOf("&"));
     console.log(url);
-    if (!localStorage.getItem("user"))
+    if (!localStorage.getItem("user")) {
       try {
         user = JSON.stringify(jwt_decode(token));
         localStorage.setItem("user", user);
-        //window.location.replace("/home")
+        // window.location.replace("/home")
         return user;
       } catch (error) {
         window.location.replace(cognitoUrl);
       }
+    }
   }
   useEffect(() => {
     loginStatus()
