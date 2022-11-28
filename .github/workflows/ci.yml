@@ -8,9 +8,12 @@ env:
   REACT_APP_COGNITO: https://mydiary.auth.us-east-1.amazoncognito.com/login?client_id=48f5b7938qm4dnjfleknn07a3&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=
   CI: false
 on:
+  push:
+    branches:
+    - master
   pull_request:
-    types:
-      - opened
+    branches:
+    - master
 
 jobs:
   CI_Check:
