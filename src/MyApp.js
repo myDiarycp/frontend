@@ -13,6 +13,7 @@ import Stats from "./routes/Stats";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Cookie from "./cookie";
 import { render } from "react-dom";
+import Signout from "./signout";
 
 function MyApp() {
   const domain = "mydiary.yoelnozar.com";
@@ -49,8 +50,11 @@ function MyApp() {
       element: <Day />,
     },
     {
-      path: "calendar/stats",
+      path: "statistics",
       element: <Stats />,
+    },    {
+      path: "logout",
+      element: <Signout />,
     },
   ]);
 
