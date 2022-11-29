@@ -3,7 +3,7 @@ import React from "react";
 import GridOnIcon from "@mui/icons-material/GridOn";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import PushPinIcon from "@mui/icons-material/PushPin";
-
+import LogoutIcon from '@mui/icons-material/Logout';
 // We will export an array of Sidebar items to render in our Sidebar.js
 export const SidebarData = [
   {
@@ -23,11 +23,11 @@ export const SidebarData = [
     link: "/calendar/stats",
   },
   {
-    title: "Pins",
+    title: "Logout",
     // Material Icons to import icons
     // npm install @material-ui/core
     // add icons with npm install @material-ui/icons
-    icon: <PushPinIcon />,
-    link: "#home",
+    icon: <LogoutIcon />,
+    link: "/logout",
   },
 ];
