@@ -20,7 +20,7 @@ export const SidebarData = [
     // npm install @material-ui/core
     // add icons with npm install @material-ui/icons
     icon: <BarChartIcon />,
-    link: "/calendar/stats",
+    link: "/statistics",
   },
   {
     title: "Logout",
