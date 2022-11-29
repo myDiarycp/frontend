@@ -33,6 +33,7 @@ export default function Journal() {
     let date = (date_object.getMonth() + 1) + "-" + date_object.getDate() + "-" + date_object.getFullYear();
     const Diary=JSON.parse(localStorage.getItem("userData")).diary
     const DiaryMap = new Map(Object.entries(Diary));
+    let name=JSON.parse(localStorage.getItem("userData")).name
     
     var entry=DiaryMap.get(date)
     
@@ -113,7 +114,7 @@ const labels = {
                     <Sidebar />
                 </Col>
                 <Col md={4} className="middle">
-                    <h1 className="mtitle">Welcome to Your Diary userData.name </h1>
+                    <h1 className="mtitle">{name}'s Diary </h1>
                 </Col>
                 <Col md={6} className = "entrySide">
                     <h1 className="aboveEntry">Entry Date: {date}</h1>
