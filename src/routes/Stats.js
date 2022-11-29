@@ -39,11 +39,11 @@ export default function Stats() {
       {
         type: "column",
         dataPoints: [
-          { label: "1 Star", y: y1 },
-          { label: "2 Star", y: y2 },
-          { label: "3 Star", y: y3 },
-          { label: "4 Star", y: y4 },
-          { label: "5 Star", y: y5 },
+          { label: "1 Star", y: y1, color: "#ff222c"},
+          { label: "2 Star", y: y2, color: "#ff7b80"},
+          { label: "3 Star", y: y3, color: "#96ed89"},
+          { label: "4 Star", y: y4, color: "#45BF55"},
+          { label: "5 Star", y: y5, color: "#168039"},
         ],
       },
     ],
