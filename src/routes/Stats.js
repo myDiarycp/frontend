@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './calendar.css';
 import Sidebar from './Sidebar';
+import './stats.css';
+
 
 //var CanvasJSReact = require('./canvasjs.react');
 // var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -36,6 +38,7 @@ export default function Stats() {
   }
   console.log("Y1 IS", y1);
   const options = {
+    backgroundColor: "#ffd9c0",
     title: {
       text: "Statistics For Month of  " + currentMonth,
     },
@@ -63,7 +66,7 @@ export default function Stats() {
                     </h1>
                     <Sidebar />
                 </Col>  
-                <Col >
+                <Col className="stats-left">
                     <CanvasJSChart options={options} />
                 </Col>
             </Row>
