@@ -29,7 +29,7 @@ export default function Signout() {
             //setTimeout(window.location.replace("/home"),500)
             window.setTimeout(function () {
               window.location.href = "/";
-            }, 1000);
+            }, 750);
             //
           });
       }, []);
