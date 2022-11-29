@@ -89,7 +89,7 @@ export default function Cookie() {
         //setTimeout(window.location.replace("/home"),500)
         window.setTimeout(function () {
           window.location.href = "/calendar";
-        }, 750);
+        }, 1000);
         //
       });
   }, []);

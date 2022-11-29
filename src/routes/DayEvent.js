@@ -158,7 +158,7 @@ export default function Journal() {
           </Box>
           <ReactQuill theme="snow" value={value} onChange={setValue} />
           <Button onClick={submitEntry} variant="dark" size="lg">
-            Submit
+            Save
           </Button>
         </Col>
       </Row>
