@@ -28,6 +28,6 @@ export const SidebarData = [
     // npm install @material-ui/core
     // add icons with npm install @material-ui/icons
     icon: <LogoutIcon />,
-    link: "#logout",
+    link: "/logout",
   },
 ];
