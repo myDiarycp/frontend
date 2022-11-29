@@ -1,6 +1,10 @@
 // import CanvasJS from 'canvasjs';
 // import CanvasJSReact from './canvasjs.react';
 import { CanvasJSChart } from "canvasjs-react-charts";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './calendar.css';
+import Sidebar from './Sidebar';
 
 //var CanvasJSReact = require('./canvasjs.react');
 // var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -33,7 +37,7 @@ export default function Stats() {
   console.log("Y1 IS", y1);
   const options = {
     title: {
-      text: "Statistics for month " + currentMonth,
+      text: "Statistics For Month of  " + currentMonth,
     },
     data: [
       {
@@ -52,7 +56,17 @@ export default function Stats() {
   // alert(date_object);
   return (
     <div className="Stats">
-      <CanvasJSChart options={options} />
+        <Row className="calendarpageRow">
+                <Col md={2} className = "left">
+                    <h1 className="leftText">MyDiary  
+                    <img src={require('../logo.jpeg')} className="entryImage" alt=""/>
+                    </h1>
+                    <Sidebar />
+                </Col>  
+                <Col >
+                    <CanvasJSChart options={options} />
+                </Col>
+            </Row>
     </div>
 
     // <div className = "DayEvent">

@@ -6,8 +6,8 @@
 
 .react-calendar {
   min-width: 100%;
-  max-width: 100%;
-  min-height: 100vh;
+  max-width: 10px;
+  min-height: 10vh;
   /* background: white; */
   background-color: #ffd9c0;
   border: 1px solid #a0a096;
