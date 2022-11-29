@@ -40,7 +40,7 @@ export default function Stats() {
   const options = {
     backgroundColor: "#ffd9c0",
     title: {
-      text: "Statistics For Month of  " + currentMonth,
+      text: "Statistics for  " + currentDate.toLocaleString('default', { month: 'long' }),
     },
     data: [
       {
