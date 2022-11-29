@@ -16,7 +16,7 @@ import { render } from "react-dom";
 import Signout from "./signout";
 
 function MyApp() {
-  const domain = "mydiary.yoelnozar.com";
+  //const domain = "mydiary.yoelnozar.com";
   //const domain="http://localhost:5000"
   //HOME SCREEN
 
