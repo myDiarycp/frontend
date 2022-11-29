@@ -10,7 +10,7 @@ body {
 }
 
 .Sidebar {
-  min-height: 100vh;
+  min-height: 10vh;
   /* change width of blue sidebar */
   width: 190px;
   background-color: #11324d;
