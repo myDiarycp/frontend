@@ -49,7 +49,6 @@ export default function CalendarDisplay() {
 
     return (
         <div>
-            {/* <p>Hello</p> */}
             <Row className="calendarpageRow">
                 <Col md={2} className = "left">
                     <h1 className="leftText">MyDiary  
