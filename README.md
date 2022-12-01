@@ -14,6 +14,33 @@ Frontend Website: [frontend-4py.pages.dev](https://frontend-4py.pages.dev)
 [Figma](https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1)
 
 # Environment Set Up:
+Step 1. ) run npm init to create a new app
+Step 2.) Before we can successfully npm start, we need to npm install the following packages:
+- npm install @emotion/react
+- npm install @emotion/styled
+- npm install @material-ui/core
+- npm install @material-ui/icons
+- npm install @mui/icons-material
+- npm install @mui/material
+- npm install @testing-library/jest-dom
+- npm install @testing-library/react 
+- npm install @testing-library/user-event 
+- npm install axios
+- npm install bootstrap
+- npm install canvasjs
+- npm install canvasjs-react-charts 
+- npm install dompurify
+- npm install jwt-decode
+- npm install prettier
+- npm install quill
+- npm install react
+- npm install react-bootstrap
+- npm install react-calendar
+- npm install react-dom
+- npm install react-quill
+- npm install react-router-dom
+- npm install react-scripts
+- npm install web-vitals
 
 Before we can successfully npm start, we need to npm install the following packages:
 -    "@emotion/react": "^11.10.5",
