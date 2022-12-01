@@ -7,7 +7,7 @@ This is the frontend for the diary app. This app allows users to create a login 
 
 Frontend CI: ![Badge](https://github.com/myDiarycp/frontend/actions/workflows/ci.yml/badge.svg)
 
-Frontend Website: ![frontend-4py.pages.dev](https://frontend-4py.pages.dev)
+Frontend Website: [frontend-4py.pages.dev](https://frontend-4py.pages.dev)
 
 
 # UI Prototype 
