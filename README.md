@@ -13,6 +13,46 @@ Frontend Website: [frontend-4py.pages.dev](https://frontend-4py.pages.dev)
 # UI Prototype 
 https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1
 
+# Environment Set Up:
+
+Before we can successfully npm start, we need to npm install the following packages:
+-    "@emotion/react": "^11.10.5",
+-    "@emotion/styled": "^11.10.5",
+-    "@material-ui/core": "^4.12.4",
+-    "@material-ui/icons": "^4.11.3",
+-    "@mui/icons-material": "^5.10.9",
+-    "@mui/material": "^5.10.13",
+-    "@testing-library/jest-dom": "^5.16.5",
+-    "@testing-library/react": "^13.4.0",
+-    "@testing-library/user-event": "^13.5.0",
+-    "axios": "^1.1.3",
+-    "bootstrap": "^5.2.2",
+-    "canvasjs": "^1.8.3",
+-    "canvasjs-react-charts": "^1.0.5",
+-    "convert": "^4.7.0",
+-    "dompurify": "^2.4.1",
+-    "draft": "^0.2.3",
+-    "draft-convert": "^2.1.13",
+-    "draft-js": "^0.11.7",
+-    "draft-js-export-html": "^1.4.1",
+-    "draft-js-import-html": "^1.4.1",
+-    "draft-js-utils": "^1.4.1",
+-    "gh-pages": "^4.0.0",
+-    "jwt-decode": "^3.1.2",
+-    "prettier": "^2.8.0",
+-    "quill": "^1.3.7",
+-    "react": "^18.2.0",
+-    "react-bootstrap": "^2.5.0",
+-    "react-calendar": "^4.0.0",
+-    "react-dom": "^18.2.0",
+-    "react-draft-wysiwyg": "^1.15.0",
+-    "react-quill": "^2.0.0",
+-   "react-router-dom": "^6.4.2",
+-   "react-scripts": "5.0.1",
+-    "slate": "^0.85.0",
+-    "slate-react": "^0.83.2",
+-    "web-vitals": "^2.1.4"
+
 # STYLE GUIDELINES:
 
 - 1.) Install Prettier and ESlint in VSCode
