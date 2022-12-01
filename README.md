@@ -43,7 +43,7 @@ Step 2.) Before we can successfully npm start, we need to npm install the follow
 
 # STYLE GUIDELINES:
 
-- 1.) run npm install prettier --save-dev 
-- 2.) run npm install eslint --save-dev
-- 3.) run npm run lint
+- run npm install prettier --save-dev 
+- run npm install eslint --save-dev
+- run npm run lint
 - *the lint command is already set up in the package.json
