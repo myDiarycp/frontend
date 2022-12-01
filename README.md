@@ -11,7 +11,7 @@ Frontend Website: [frontend-4py.pages.dev](https://frontend-4py.pages.dev)
 
 
 # UI Prototype 
-https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1
+[Figma](https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1)
 
 # Environment Set Up:
 
