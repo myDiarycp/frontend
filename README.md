@@ -5,7 +5,7 @@ This is the frontend for the diary app. This app allows users to create a login 
 
 # Project Status
 
-CI: ![Badge](https://github.com/myDiarycp/frontend/actions/workflows/ci.yml/badge.svg)
+Frontend CI: ![Badge](https://github.com/myDiarycp/frontend/actions/workflows/ci.yml/badge.svg)
 
 
 # STYLE GUIDELINES:
