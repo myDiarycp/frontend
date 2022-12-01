@@ -2,13 +2,16 @@
 
 This is the frontend for the diary app. This app allows users to create a login and enter diary entries that will be preserved across days and logins. The application allows for one entry every day and contains a rating system that can be visualized on a statistics page. It allows for anyone looking to keep track of their days to do so easily and reflect on days and months as a whole.  
 
-# UI Prototype 
-https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1
 
 # Project Status
 
 Frontend CI: ![Badge](https://github.com/myDiarycp/frontend/actions/workflows/ci.yml/badge.svg)
 
+Frontend Website: ![frontend-4py.pages.dev](https://frontend-4py.pages.dev)
+
+
+# UI Prototype 
+https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1
 
 # STYLE GUIDELINES:
 
