@@ -12,6 +12,16 @@ Frontend Website: [frontend-4py.pages.dev](https://frontend-4py.pages.dev)
 
 [Figma](https://www.figma.com/file/g0mjqMVF5KSStrsPTFlGUc/Prototype?node-id=0%3A1&t=OrI8enNNnr5VR09P-1)
 
+# Diagrams
+
+[Class Diagram Image](https://github.com/myDiarycp/backend/blob/main/ClassDiagram.png)
+
+[Class Diagram File](https://github.com/myDiarycp/backend/blob/main/ClassDiagram.drawio)
+
+[Use Case Diagram Image](https://github.com/myDiarycp/backend/blob/main/UseCase.png)
+
+[Use Case Diagram File](https://github.com/myDiarycp/backend/blob/main/UseCase.drawio)
+
 # Environment Set Up:
 
 Step 1. ) run npm init to create a new app
