@@ -2,8 +2,7 @@ import React from "react";
 //Access Icons on https://mui.com/material-ui/material-icons/?query=grid&selected=GridOn
 import GridOnIcon from "@mui/icons-material/GridOn";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import PushPinIcon from "@mui/icons-material/PushPin";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
 // We will export an array of Sidebar items to render in our Sidebar.js
 export const SidebarData = [
   {

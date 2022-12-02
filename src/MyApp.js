@@ -1,16 +1,11 @@
-import Table from "./Table";
-import Form from "./Form";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import jwt_decode from "jwt-decode";
-import ReactDOM from "react-dom/client";
+import React from "react";
 import Oldhome from "./oldhome";
 import Root from "./root";
 import Home from "./home";
 import Calendar from "./routes/calender_page";
 import Day from "./routes/DayEvent";
 import Stats from "./routes/Stats";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cookie from "./cookie";
 import { render } from "react-dom";
 import Signout from "./signout";
@@ -52,7 +47,8 @@ function MyApp() {
     {
       path: "statistics",
       element: <Stats />,
-    },    {
+    },
+    {
       path: "logout",
       element: <Signout />,
     },

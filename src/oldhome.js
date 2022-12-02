@@ -2,9 +2,6 @@ import Table from "./Table";
 import Form from "./Form";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import jwt_decode from "jwt-decode";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 function Oldhome() {
   const domain = "http://localhost:8080"; //"http://mydiarybackend-env.eba-zngppmhw.us-east-1.elasticbeanstalk.com"
