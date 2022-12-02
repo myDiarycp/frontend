@@ -32,9 +32,10 @@ export default function Cookie() {
           diary: { "10-11-2022": entry },
         };
         console.log(account);
+        localStorage.setItem("userData", JSON.stringify(account));
         const resp = await axios.post(domain + "/users", account);
         console.log(resp);
-        localStorage.setItem("userData", JSON.stringify(account));
+      
       } else {
         //user already in DB  a
         userData = userList[0];
