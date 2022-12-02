@@ -26,9 +26,9 @@ Last Updated: 12/02/2022
 
 # Environment Set Up:
 
-Step 1. ) run npm init to create a new app
-Step 2.) Before we can successfully npm start, we need to npm install the following packages:
-
+1.) npm install
+2.) add the .env file with the REACT_APP_API_DOMAIN, REACT_APP_COGNITO_REDIRECT, REACT_APP_HOMEPAGE, REACT_APP_COGNITO
+3.) we need to npm install the following:
 - npm install @emotion/react
 - npm install @emotion/styled
 - npm install @material-ui/core
