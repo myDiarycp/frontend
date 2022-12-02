@@ -28,7 +28,7 @@ Last Updated: 12/02/2022
 
 1.) Clone this repository
 2.) npm install
-3.) add the .env file with the REACT_APP_API_DOMAIN, REACT_APP_COGNITO_REDIRECT, REACT_APP_HOMEPAGE, REACT_APP_COGNITO
+3.) add the .env file with the REACT_APP_API_DOMAIN, REACT_APP_COGNITO_REDIRECT, REACT_APP_HOMEPAGE, REACT_APP_COGNITO (reach out to other software developers for full .env file. It cannot be posted publicly to prevent security breaches)
 4.) we need to npm install the following:
 - npm install @emotion/react
 - npm install @emotion/styled
